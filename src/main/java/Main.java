@@ -27,6 +27,11 @@ class Main {
     }
 
     public static void printNameOfTerminatedThread(Thread[] threads) {
-        
+
+        for(Thread thread: threads){
+        //if (threads[thread] == "Terminated") {
+            System.out.println("TERMINATED THREAD: " + thread);
+        //}
+        }
     }
-}
+    }
