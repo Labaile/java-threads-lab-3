@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 class Main {
     public static void main(String[] args) throws InterruptedException {
         Thread t1 = new Thread(() -> System.out.println("Hello from Thread 1"));
@@ -30,9 +32,9 @@ class Main {
 
         //for(Thread thread: threads){
         for(int i = 0; i<threads.length; i++){
-        //if (threads[thread] == "Terminated") {
+            Arrays.stream(threads).distint();
             System.out.println("TERMINATED THREAD: " + threads[i]);
-        //}
+        }
         }
     }
-    }
+
