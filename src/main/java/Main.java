@@ -31,10 +31,12 @@ class Main {
     public static void printNameOfTerminatedThread(Thread[] threads) {
 
         //for(Thread thread: threads){
+
         for(int i = 0; i<threads.length; i++){
-            Arrays.stream(threads).distint();
-            System.out.println("TERMINATED THREAD: " + threads[i]);
-        }
+            if(threads[i].getState() == Thread.State.TERMINATED) {
+                System.out.println("TERMINATED THREAD: " + threads[i].getName());
+            }
         }
     }
+}
 
